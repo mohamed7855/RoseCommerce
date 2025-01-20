@@ -1,0 +1,28 @@
+<div class="relative overflow-hidden">
+    <!-- carousel -->
+    <owl-carousel-o [options]="customOptions">
+        @for (slide of sliders.imgs; track $index) {
+        <ng-template carouselSlide>
+            <div [style]="{'background-image': 'url('+slide+')'}"
+                class="h-[540px] bg-[length:100%_110%] bg-clip-border bg-no-repeat">
+            </div>
+        </ng-template>
+        }
+
+    </owl-carousel-o>
+
+    <!-- layer text -->
+    <div class="content absolute  z-10 left-14 top-14 w-[35%]">
+        <div class="flex flex-col items-start gap-6 text-[var(--text-main-color)] ">
+            <h4 class="text-[var(--main-color)] text-xl font-bold tracking-[3.7px] leading-6 uppercase">Best Gift Shop
+            </h4>
+            <h2 class="text-5xl font-bold leading-[50.5px]">Choose Perfect <span
+                    class="text-[var(--main-color)]">Gifts</span> From Us</h2>
+            <p class="text-xl font-normal leading-7	">Culpa ducimus nesciunt aliquam non rerum esse recusandae omnis.
+                Rerum optio dolores et.</p>
+            <button type="button"
+                class="text-white bg-[var(--main-color)] rounded-xl py-3 px-5 text-base leading-7 font-medium">Shop
+                Now<i class="fa-solid fa-arrow-right text-xl align-middle ms-1"></i></button>
+        </div>
+    </div>
+</div>
