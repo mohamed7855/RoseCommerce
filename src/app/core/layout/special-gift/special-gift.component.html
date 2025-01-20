@@ -1,6 +1,6 @@
-<div class="container mx-auto grid  grid-cols-1 md:grid-cols-12 gap-6">
-  <div [style]="{ 'background-image': 'url(' + mockupData[0].img + ')' }"
-    class="h-[540px] bg-cover bg-bottom md:col-span-3 rounded-[var(--second-radius)] p-5">
+<div class="container mx-auto grid grid-cols-12 gap-6">
+  <div [style]="{ 'background-image': 'url(' + gifts[0].img + ')' }"
+    class="h-[540px] bg-cover bg-bottom md:col-span-3 col-span-12 rounded-[var(--second-radius)] p-5">
     <div class="flex flex-col gap-3 items-start justify-end h-full">
       <h4 class="text-xl font-bold leading-8 tracking-[4.6px] uppercase text-[var(--main-color)]">Start $10.99</h4>
       <h2 class="text-[var(--text-main-color)] text-[26px] font-semibold leading-8 max-w-[70%]">Special Gifts Box For
@@ -13,41 +13,11 @@
   </div>
 
   <!-- Start Carousel Container -->
-  <div class="md:col-span-9 h-[540px]"><app-best-gift-carousel [sliders]="mockupData[1]"></app-best-gift-carousel></div>
+  <div class="md:col-span-9 col-span-12 h-[540px]"><app-best-gift-carousel
+      [sliders]="gifts[1]"></app-best-gift-carousel></div>
   <!-- End Carousel Container -->
 
-  <div [style]="{ 'background-image': 'url(' + mockupData[2].img + ')' }"
-    class="h-[272px] bg-cover bg-bottom md:col-span-4 rounded-[var(--second-radius)] p-5">
-    <div class="flex flex-col gap-3 items-end justify-center h-full">
-      <h5 class="text-[var(--main-color)] text-[16px] font-normal leading-5">Gifts Box</h5>
-      <h2 class="text-[var(--text-main-color)] text-xl font-semibold leading-6 text-right max-w-[45%]">Awesome Gifts Box
-        Collectons</h2>
-      <button type="button"
-        class="text-white bg-[var(--main-color)] rounded-[20px] p-2 text-sm leading-4 font-normal">Shop
-        Now</button>
-    </div>
-  </div>
-
-
-  <div [style]="{ 'background-image': 'url(' + mockupData[3].img + ')' }"
-    class="h-[272px] bg-cover bg-bottom md:col-span-4 rounded-[var(--second-radius)] p-5">
-    <div class="flex flex-col gap-3 items-end justify-center h-full">
-      <h5 class="text-[var(--main-color)] text-[16px] font-normal leading-5">Occasion Gifts</h5>
-      <h2 class="text-[var(--text-main-color)] text-xl font-semibold leading-6 text-right max-w-[45%]">Best Occasion
-        Gifts Collections</h2>
-      <button type="button"
-        class="text-white bg-[var(--main-color)] rounded-[20px] p-2 text-sm leading-4 font-normal">Discover Now</button>
-    </div>
-  </div>
-  <div [style]="{ 'background-image': 'url(' + mockupData[4].img + ')' }"
-    class="h-[272px] bg-cover bg-bottom md:col-span-4 rounded-[var(--second-radius)] p-5">
-    <div class="flex flex-col gap-3 items-end justify-center h-full">
-      <h5 class="text-[var(--main-color)] text-[16px] font-normal leading-5">Occasion Gifts</h5>
-      <h2 class="text-[var(--text-main-color)] text-xl font-semibold leading-6 text-right max-w-[45%]">Combo Sets Gift
-        Box Up To 50% Off
-      </h2>
-      <button type="button"
-        class="text-white bg-[var(--main-color)] rounded-[20px] p-2 text-sm leading-4 font-normal">Discover Now</button>
-    </div>
-  </div>
+  @for (gift of subGifts; track $index) {
+  <div class="col-span-12 md:col-span-4"> <app-gift [giftData]="gift"></app-gift></div>
+  }
 </div>

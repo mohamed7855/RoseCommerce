@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { BestGiftCarouselComponent } from '../../components/best-gift-carousel/best-gift-carousel.component';
+import { GiftComponent } from '../../components/gift/gift.component';
 
 @Component({
   selector: 'app-special-gift',
-  imports: [BestGiftCarouselComponent],
+  imports: [BestGiftCarouselComponent, GiftComponent],
   templateUrl: './special-gift.component.html',
   styleUrl: './special-gift.component.scss',
 })
 export class SpecialGiftComponent {
-  mockupData = [
+  gifts = [
     {
       img: './imgs/specialGift1.png',
       title: 'Gifts Box',
@@ -16,7 +17,6 @@ export class SpecialGiftComponent {
     },
     {
       imgs: [
-
         './imgs/specialGift2.1.png',
         './imgs/specialGift2.2.png',
         './imgs/specialGift2.3.png',
@@ -29,17 +29,22 @@ export class SpecialGiftComponent {
     {
       img: './imgs/specialGift3.png',
       title: 'Gifts Box',
-      desc: 'Best gift',
+      desc: 'Awesome Gifts Box Collectons',
+      btnText: 'Shop Now',
     },
     {
       img: './imgs/specialGift4.png',
-      title: 'Gifts Box',
-      desc: 'Best gift',
+      title: 'Occasion Gifts',
+      desc: 'Best Occasion Gifts Collections',
+      btnText: 'Discover Now',
     },
     {
       img: './imgs/specialGift5.png',
-      title: 'Gifts Box',
-      desc: 'Best gift',
+      title: 'Occasion Gifts',
+      desc: 'Combo Sets Gift Box Up To 50% Off',
+      btnText: 'Discover Now',
     },
   ];
+
+  subGifts = this.gifts.slice(2);
 }
