@@ -21,7 +21,6 @@ export class SpecialGiftComponent {
         './imgs/specialGift2.2.png',
         './imgs/specialGift2.3.png',
         './imgs/specialGift2.4.png',
-        './imgs/specialGift2.5.png',
       ],
       title: 'Gifts Box',
       desc: 'Best gift',
