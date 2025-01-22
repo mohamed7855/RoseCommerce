@@ -13,8 +13,9 @@ export class SpecialGiftComponent {
   gifts: Gift[] = [
     {
       img: './imgs/specialGift1.png',
-      title: 'Gifts Box',
-      desc: 'Best gift',
+      title: 'Start $10.99',
+      desc: 'Special Gifts Box For Your Love',
+      btnText: 'Shop Now',
     },
     {
       imgs: [
