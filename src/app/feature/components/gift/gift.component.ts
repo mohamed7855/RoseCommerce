@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Gift } from '../../interfaces/gift';
 
 @Component({
   selector: 'app-gift',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './gift.component.scss',
 })
 export class GiftComponent {
-  @Input() giftData: any;
+  @Input() giftData!: Gift;
 }

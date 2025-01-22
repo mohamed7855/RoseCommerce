@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BestGiftCarouselComponent } from '../../components/best-gift-carousel/best-gift-carousel.component';
 import { GiftComponent } from '../../components/gift/gift.component';
+import { Gift } from '../../interfaces/gift';
 
 @Component({
   selector: 'app-special-gift',
@@ -9,7 +10,7 @@ import { GiftComponent } from '../../components/gift/gift.component';
   styleUrl: './special-gift.component.scss',
 })
 export class SpecialGiftComponent {
-  gifts: any = [
+  gifts: Gift[] = [
     {
       img: './imgs/specialGift1.png',
       title: 'Gifts Box',

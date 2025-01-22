@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { Gift } from '../../interfaces/gift';
 
 @Component({
   selector: 'app-best-gift-carousel',
@@ -9,7 +10,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   styleUrl: './best-gift-carousel.component.scss',
 })
 export class BestGiftCarouselComponent {
-  @Input() sliders: any;
+  @Input() sliders!: Gift;
 
   customOptions: OwlOptions = {
     autoplay: true,
