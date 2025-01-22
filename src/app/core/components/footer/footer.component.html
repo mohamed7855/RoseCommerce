@@ -1,20 +1,20 @@
 <footer class="py-12 mt-auto bottom-0">
-    <div class="w-8/12 mx-auto py-3 flex flex-col justify-between gap-y-6">
+    <div class="w-11/12 md:w-8/12 mx-auto py-3 flex flex-col justify-between gap-y-6">
         <ul class="text-mainText font-bold flex justify-between">
             <li class="cursor-pointer" [routerLink]="['/about']">About US</li>
             <li class="cursor-pointer" [routerLink]="['/location']">Store Location</li>
             <li class="cursor-pointer" [routerLink]="['/contact']">Contact</li>
             <li class="cursor-pointer" [routerLink]="['/delivery']">Delivery</li>
-            <li class="cursor-pointer" [routerLink]="['/policy']">Policy</li>
-            <li class="cursor-pointer" [routerLink]="['/faqs']">FAQS</li>
+            <li class="cursor-pointer hidden md:inline-block" [routerLink]="['/policy']">Policy</li>
+            <li class="cursor-pointer hidden md:inline-block" [routerLink]="['/faqs']">FAQS</li>
         </ul>
         <div>
-            <p class="text-mainText font-bold text-center text-3xl">Get <span class="text-mainBg">20%</span> Off Discount Coupon</p>
+            <p class="text-mainText font-bold text-center text-xl md:text-3xl">Get <span class="text-mainBg">20%</span> Off Discount Coupon</p>
             <p class="text-secondText text-center">By Subscribe Our Newsletter</p>
         </div>
-        <div class="rounded-full flex justify-between items-center w-5/12 bg-white mx-auto">
-            <input class="focus:outline-none rounded-full py-2 px-4 w-8/12" type="email" placeholder="Enter Your Email"/>
-            <button class="bg-mainBg rounded-full text-white py-2 px-4">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="rounded-2xl md:rounded-full flex justify-between items-center w-9/12 md:w-5/12 bg-white mx-auto">
+            <input class="focus:outline-none rounded-2xl md:rounded-full py-2 px-4 w-8/12" type="email" placeholder="Enter Your Email"/>
+            <button class="bg-mainBg rounded-2xl md:rounded-full text-white py-2 px-4">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
 </footer>
