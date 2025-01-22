@@ -9,7 +9,7 @@ import { GiftComponent } from '../../components/gift/gift.component';
   styleUrl: './special-gift.component.scss',
 })
 export class SpecialGiftComponent {
-  gifts = [
+  gifts: any = [
     {
       img: './imgs/specialGift1.png',
       title: 'Gifts Box',
@@ -22,8 +22,9 @@ export class SpecialGiftComponent {
         './imgs/specialGift2.3.png',
         './imgs/specialGift2.4.png',
       ],
-      title: 'Gifts Box',
-      desc: 'Best gift',
+      title: 'Best Gift Shop',
+      desc: 'Culpa ducimus nesciunt aliquam non rerum esse recusandae omnis. Rerum optio dolores et.',
+      btnText: 'Shop Now',
     },
     {
       img: './imgs/specialGift3.png',

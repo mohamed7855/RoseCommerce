@@ -12,18 +12,21 @@ export class BestGiftCarouselComponent {
   @Input() sliders: any;
 
   customOptions: OwlOptions = {
-    autoplay:true,
+    autoplay: true,
     loop: true,
     mouseDrag: true,
     touchDrag: false,
     pullDrag: true,
     dots: true,
     navSpeed: 700,
-    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],    
+    navText: [
+      '<i class="fa-solid fa-angle-left"></i>',
+      '<i class="fa-solid fa-angle-right"></i>',
+    ],
     responsive: {
       0: {
         items: 1,
-      }
+      },
     },
     nav: true,
   };

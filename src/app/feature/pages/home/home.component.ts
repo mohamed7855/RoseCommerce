@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SpecialGiftComponent } from "../../layout/special-gift/special-gift.component";
+import { SpecialGiftComponent } from "../special-gift/special-gift.component";
 
 @Component({
   selector: 'app-home',
