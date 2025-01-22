@@ -1,2 +1,24 @@
-<nav class="flex items-center justify-between">
+<nav>
+    <div class="w-11/12 mx-auto py-4 flex items-center justify-between">
+        <div class="cursor-pointer" [routerLink]="['/home']">
+            <img src="assets/images/logo.png" alt="Rose Commerce Logo">
+        </div>
+        <ul class="flex gap-x-6 text-mainText font-semibold">
+            <li class="cursor-pointer" [routerLink]="['/home']" routerLinkActive="text-mainBg">Home</li>
+            <li class="cursor-pointer" [routerLink]="['/category']" routerLinkActive="text-mainBg">All Category</li>
+            <li class="cursor-pointer" [routerLink]="['/about']" routerLinkActive="text-mainBg">About</li>
+            <li class="cursor-pointer" [routerLink]="['/contact']" routerLinkActive="text-mainBg">Contact</li>
+        </ul>
+        <div class="flex gap-x-4">
+            <button class="cursor-pointer">
+                <img src="../../../../assets/icons/search.png" alt="Search Icon">
+            </button>
+            <button class="cursor-pointer">
+                <img src="../../../../assets/icons/heart.png" alt="Heart Icon">
+            </button>
+            <button class="cursor-pointer">
+                <img src="../../../../assets/icons/bag.png" alt="Bag Icon">
+            </button>
+        </div>
+    </div>
 </nav>
