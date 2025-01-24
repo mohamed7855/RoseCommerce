@@ -1,0 +1,25 @@
+<div id="product-cart" class="font-medium">
+  
+
+<div class="group max-w-sm bg-white dark:bg-gray-800 dark:border-gray-700">
+    <a  class="relative overflow-hidden  rounded-xl">
+        <img class="w-full rounded-xl h-[400px]" [src]="Product.imgCover" alt="" />
+        <div class="absolute rounded-xl flex items-center justify-center transition-all duration-200 opacity-0 group-hover:opacity-100 bg-[var(--second-main-color)] top-0 right-0 left-0 bottom-0">
+             <div class="flex items-center  ">
+                <app-btn-icon [iconShape]="'regular'" [iconName]="'eye'" [iconBgColor]="'var(--main-color)'" />  
+                <app-btn-icon [iconShape]="'regular'" [iconName]="'heart'" [iconBgColor]="'var(--main-color)'" /> 
+             </div>
+        </div>
+    </a>
+    <div class="p-5 flex items-center justify-between">
+      <div>
+        <a href="#">
+            <h6 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{Product.title}}</h6>
+        </a>
+        <app-rating />
+        <p class=" text-red-500">${{Product.priceAfterDiscount}} <s class="text-gray-500">${{Product.price}}</s></p>
+      </div>
+           <app-btn-icon [iconShape]="'solid'" [iconName]="'bag-shopping'" [iconBgColor]="'var(--purple-color)'" />  
+    </div>
+</div>
+</div>

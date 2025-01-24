@@ -1,14 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
-    --main-color: #F82BA9
-    --second-color: #FEEDF7
-    --third-color: #8C52FF
-    --text-main-color:#160E4B
-    --text-second-color: #757F95
-    --text-third-color: #F05454
-    --text-fourth-color: #DEE2E6
-    --radius: 1.25rem 
+    --main-color:  #F82BA9 ;
+    --second-main-color : #F82BA9B2;
+    --second-color:  #FEEDF7 ;
+    --third-color: #8C52FF ;
+    --text-main-color:#160E4B ;
+    --text-second-color: #757F95 ;
+    --text-third-color: #F05454 ;
+    --text-fourth-color: #DEE2E6 ;
+    --purple-color : #8C52FF;
+    --radius: 1.25rem  ;
+}
+
+
+.font-bold{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 7oo;
+    font-style: normal;
+}
+
+.font-semiBold{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 6oo;
+    font-style: normal;
+}
+
+.font-medium{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 5oo;
+    font-style: normal;
+}
+
+.font-regular{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 4oo;
+    font-style: normal;
+}
+
+.font-light{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 4oo;
+    font-style: normal
 }
