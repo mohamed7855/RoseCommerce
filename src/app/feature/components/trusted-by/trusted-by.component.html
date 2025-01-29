@@ -2,12 +2,10 @@
     <div class="bg-[#FEEDF7] px-6 rounded-2xl">
         <h4 class=" text-[#160E4B] font-bold text-2xl sm:text-3xl relative text-center py-10 after:content-[''] after:bg-[#F82BA9] after:w-40 after:absolute after:h-[2px] after:bottom-8 after:left-1/2 after:translate-x-[-117%] md:after:translate-x-[-147%]">Trusted By Over <span class="text-[#F82BA9]">4.5k+</span> Companies</h4>
         <div class="flex justify-between pb-10">
-            <img class="w-[12%]" src="./images/image36.png" alt="">
-            <img class="w-[12%]" src="./images/image40.png" alt="">
-            <img class="w-[12%]" src="./images/image41.png" alt="">
-            <img class="w-[12%]" src="./images/image38.png" alt="">
-            <img class="w-[12%]" src="./images/image39.png" alt="">
-            <img class="w-[12%]" src="./images/image37.png" alt="">
+            @for (img of imgList; track $index) {
+                <img class="w-[12%]" [src]="imgList[$index]" alt="">
+            }
         </div>
     </div>
 </div>
+
