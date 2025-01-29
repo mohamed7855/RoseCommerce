@@ -1,0 +1,38 @@
+<div class="">
+    <div class="container mx-auto py-5 px-5 lg:px-0">
+        <div class="parent lg:flex justify-between ">
+            <div class="my-img lg:w-[45%] flex gap-x-2 items-center  pb-5">
+                <div class="w-[60%] ">
+                    <div class="w-[90%] relative">
+                        <div class="absolute top-[10px] bottom-[-24.21px] left-0 right-[20%] rounded-tl-[50px] rounded-tr-[120px] rounded-br-[120px] rounded-bl-[120px] border-4 border-[#F82BA9] rotate-[3.09deg]"></div>
+                        <img class=" w-full relative top-[24.21px] left-[18px] " src="./images/imageWithoutFrame.png" alt="">
+                    </div>
+                </div>
+                <div class="w-[32%] ">
+                    <img class="w-full" src="./images/circleGiftImage.png" alt="">
+                    <img class="w-full" src="./images/ovaleFlyingGift.png" alt="">
+                </div>
+            </div>
+            <div class="my-content py-4 lg:py-0 lg:w-1/2 ">
+                <h2 class="text-[17px] font-bold text-[#F82BA9] tracking-[0.2em]">ABOUT US</h2>
+                <h5 class="text-xl lg:text-3xl font-bold leading-[40.8px] pt-6 pb-2">We Provide Best And Quality <span class="text-[#F82BA9]">Gifts <br> Box</span> Product For You</h5>
+                <p class="leading-7 text-[#757F95] pb-6">Recusandae tempora aut laborum molestias veniam. A commodi sequi accusantium ullam cupiditate. Neque quidem qui et autem dolor dicta necessitatibus ut ad.</p>
+                <button type="button" class="text-white bg-[#F82BA9] rounded-[10px] py-[15px] px-[20px] text-sm leading-4 font-medium">Discover
+                    More <i class="fa-solid fa-arrow-right ps-2"></i></button>
+                
+                <div class="w-4/5  pt-6 lg:flex flex-wrap gap-y-2  justify-between">
+                    @for (item of aboutList; track $index) {
+
+                        <div class="lg:w-1/2 py-2 lg:py-0 flex items-center ">
+                            <span class="bg-[#8C52FF] w-[42px] h-[42px] rounded-full flex justify-center items-center">
+                                <i class="fa-solid fa-check text-white"></i>
+                            </span>
+                            <p class="text-xs leading-[14.52px] font-medium ps-3">{{item}}</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
