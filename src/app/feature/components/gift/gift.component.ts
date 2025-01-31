@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { Gift } from '../../interfaces/gift';
 
 @Component({
@@ -8,5 +8,6 @@ import { Gift } from '../../interfaces/gift';
   styleUrl: './gift.component.scss',
 })
 export class GiftComponent {
-  @Input() giftData!: Gift;
+  // @Input() giftData!: Gift;
+  giftData: InputSignal<Gift> = input.required<Gift>();
 }

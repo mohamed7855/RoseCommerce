@@ -1,10 +1,10 @@
-<div [style]="{ 'background-image': 'url(' + giftData.img + ')' }"
+<div [style]="{ 'background-image': 'url(' + giftData().img + ')' }"
     class="h-[272px] bg-cover bg-bottom  rounded-[var(--second-radius)] p-5">
     <div class="flex flex-col gap-3 items-end justify-center h-full">
-        <h5 class="text-[var(--main-color)] text-[16px] font-normal leading-5">{{giftData.title}}</h5>
+        <h5 class="text-[var(--main-color)] text-[16px] font-normal leading-5">{{giftData().title}}</h5>
         <h2 class="text-[var(--text-main-color)] text-xl font-semibold leading-6 text-right max-w-[45%]">
-            {{giftData.desc}}</h2>
+            {{giftData().desc}}</h2>
         <button type="button"
-            class="text-white bg-[var(--main-color)] rounded-[20px] p-2 text-sm leading-4 font-normal">{{giftData.btnText}}</button>
+            class="text-white bg-[var(--main-color)] rounded-[20px] p-2 text-sm leading-4 font-normal">{{giftData().btnText}}</button>
     </div>
 </div>
