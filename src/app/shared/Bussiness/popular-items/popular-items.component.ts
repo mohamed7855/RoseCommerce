@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductCartComponent } from '../../UI/product-cart/product-cart.component';
 import { ProductsService } from '../../../feature/services/Products/products.service';
 import { IProduct } from '../../../feature/models/product';
@@ -13,12 +13,15 @@ import { IProduct } from '../../../feature/models/product';
   templateUrl: './popular-items.component.html',
   styleUrl: './popular-items.component.scss'
 })
-export class PopularItemsComponent {
+export class PopularItemsComponent implements OnDestroy{
 
   allProducts !: IProduct[];
 
   constructor(private _productsService:ProductsService){
     this.getAllProduct();
+  }
+  ngOnDestroy(): void {
+    this._productsService.getProducts().subscribe();
   }
 
   getAllProduct(){
