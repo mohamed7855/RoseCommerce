@@ -1,0 +1,13 @@
+<section>
+    <div class="container mx-auto text-center">
+        <h3 class="uppercase text-lg font-bold leading-8 tracking-widest text-[var(--main-color)]">Our Gallery</h3>
+        <h2 class="text-3xl font-bold leading-[36.31px] text-[var(--text-main-color)]">Let's Check Our Photo Gallery
+        </h2>
+        <div class="grid grid-cols-12 gap-6 mt-4">
+            @for (img of galleryImages; track $index) {
+            <div class="h-[411px] bg-cover rounded-[40px] col-span-12" [class]="img.class"
+                [style]="{ 'background-image': 'url('+img.src+')'}"></div>
+            }
+        </div>
+    </div>
+</section>
