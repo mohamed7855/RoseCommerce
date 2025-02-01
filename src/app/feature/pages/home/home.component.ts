@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SpecialGiftComponent } from "../special-gift/special-gift.component";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [SpecialGiftComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -1,0 +1,20 @@
+<div class="container mx-auto grid grid-cols-12 gap-6">
+  <div [style]="{ 'background-image': 'url(' + gifts[0].img + ')' }"
+    class="h-[540px] bg-cover bg-bottom md:col-span-4 lg:col-span-3 col-span-12 rounded-[var(--second-radius)] p-5">
+    <div class="flex flex-col gap-3 items-start justify-end h-full">
+      <h4 class="text-xl font-bold leading-8 tracking-[4.6px] uppercase text-[var(--main-color)]">{{gifts[0].title}}</h4>
+      <h2 class="text-[var(--text-main-color)] text-[26px] font-semibold leading-8 max-w-[50%] md:max-w-[75%]">{{gifts[0].desc}}</h2>
+      <button type="button"
+        class="text-white bg-[var(--main-color)] rounded-xl py-[6.5px] px-[14px] text-base leading-7 font-medium">{{gifts[0].btnText}}<i class="fa-solid fa-arrow-right text-xl align-middle ms-1"></i></button>
+    </div>
+  </div>
+
+  <!-- Start Carousel Container -->
+  <div class="md:col-span-8 lg:col-span-9 col-span-12 h-[540px]"><app-best-gift-carousel
+      [sliders]="gifts[1]"></app-best-gift-carousel></div>
+  <!-- End Carousel Container -->
+
+  @for (gift of subGifts; track $index) {
+  <div class="col-span-12 md:col-span-4"> <app-gift [giftData]="gift"></app-gift></div>
+  }
+</div>
