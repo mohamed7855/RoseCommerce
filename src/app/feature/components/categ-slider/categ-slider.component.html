@@ -1,0 +1,16 @@
+<div class="parent  container mx-auto ">
+    <!-- grid sm:gird-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 -->
+    
+        <owl-carousel-o [options]="customOptions">
+    
+            @for (category of allCategories; track $index) {
+                <ng-template carouselSlide >
+                    <app-category [category]="{ img: category.image, name: category.name, count: category.productsCount , width:'w-20' , height:'h-20'}"></app-category>
+                </ng-template>
+        }
+        
+        </owl-carousel-o>
+    
+    
+    
+    </div>
