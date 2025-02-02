@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { BestGiftCarouselComponent } from '../../components/best-gift-carousel/best-gift-carousel.component';
-import { GiftComponent } from '../../components/gift/gift.component';
+import { BestGiftCarouselComponent } from '../best-gift-carousel/best-gift-carousel.component';
+import { GiftComponent } from '../gift/gift.component';
 import { Gift } from '../../interfaces/gift';
 
 @Component({
