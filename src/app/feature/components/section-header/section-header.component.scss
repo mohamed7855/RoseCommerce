@@ -1,0 +1,27 @@
+h2 {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+  text-align: start !important;
+  &::after {
+    content: "";
+    position: absolute;
+    border-end-end-radius: 20px;
+    border-start-end-radius: 20px;
+    height: 55%;
+    width: 80%;
+    left: 0;
+    top: 55%;
+    background-color: rgba(248, 43, 169, 0.2);
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 5%;
+    width: 35%;
+    top: 105%;
+    background-color: var(--main-color);
+  }
+}
