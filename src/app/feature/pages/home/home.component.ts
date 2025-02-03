@@ -4,6 +4,7 @@ import { CategoriesSliderComponent } from '../../components/categ-slider/categ-s
 import { StaticInfoComponent } from '../../components/static-info/static-info.component';
 import { CustomerOpinionComponent } from '../../components/customer-opinion/customer-opinion.component';
 import { TrustedByComponent } from "../../components/trusted-by/trusted-by.component";
+import { AboutUsComponent } from "../../components/about-us/about-us.component";
 @Component({
   selector: 'app-home',
   imports: [
@@ -11,7 +12,8 @@ import { TrustedByComponent } from "../../components/trusted-by/trusted-by.compo
     CategoriesSliderComponent,
     StaticInfoComponent,
     CustomerOpinionComponent,
-    TrustedByComponent
+    TrustedByComponent,
+    AboutUsComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
