@@ -6,6 +6,7 @@ import { StaticInfoComponent } from '../../components/static-info/static-info.co
 import { CustomerOpinionComponent } from '../../components/customer-opinion/customer-opinion.component';
 import { TrustedByComponent } from '../../components/trusted-by/trusted-by.component';
 import { AboutUsComponent } from '../../components/about-us/about-us.component';
+import { CategSideBarComponent } from "../../components/categ-side-bar/categ-side-bar.component";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { AboutUsComponent } from '../../components/about-us/about-us.component';
     TrustedByComponent,
     AboutUsComponent,
     GalleryComponent,
-  ],
+    CategSideBarComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

@@ -1,0 +1,18 @@
+input[type="checkbox"] {
+    appearance: none;
+    // -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #757F95; /* Magenta border */
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ff33cc !important; /* Magenta fill */
+    border-color: #ff33cc !important;
+}

@@ -1,3 +1,4 @@
+import { CategoryComponent } from './feature/pages/category/category.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -9,7 +10,8 @@ export const routes: Routes = [
       import('./feature/pages/home/home.component').then((c) => c.HomeComponent),
   },
   {path: 'about', title: 'About Us', loadComponent: () => import('./feature/pages/about/about.component').then(c => c.AboutComponent)},
-  {path: 'location', title: 'About Us', loadComponent: () => import('./feature/pages/location/location.component').then(c => c.LocationComponent)},
+  {path: 'category', title: 'Category', loadComponent: () => import('./feature/pages/category/category.component').then(c => c.CategoryComponent)},
+  {path: 'location', title: 'Location', loadComponent: () => import('./feature/pages/location/location.component').then(c => c.LocationComponent)},
   {path: 'contact', title: 'Contact Us', loadComponent: () => import('./feature/pages/contact/contact.component').then(c => c.ContactComponent)},
   {path: 'delivery', title: 'Delivery', loadComponent: () => import('./feature/pages/delivery/delivery.component').then(c => c.DeliveryComponent)},
   {path: 'policy', title: 'Policy', loadComponent: () => import('./feature/pages/policy/policy.component').then(c => c.PolicyComponent)},

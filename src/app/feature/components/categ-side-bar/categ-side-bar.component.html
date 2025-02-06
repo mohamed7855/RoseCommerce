@@ -1,0 +1,96 @@
+<div class=" flex flex-col gap-y-6" >
+    <app-sidebar-card [card]=" {title: 'Category'}">
+        <div>
+            @for (categ of categories; track $index) {
+                <div class="flex justify-between text-[#757F95] font-[inter] text-sm leading-5 pb-2">
+                    <div class="flex items-center">
+                        <input type="checkbox">
+                        <span class="ps-2">{{categ}}</span>
+                    </div>
+                    <span>(8)</span>
+                </div>
+            }
+        </div>
+    </app-sidebar-card>
+
+    <app-sidebar-card [card]=" {title: 'Brands'}">
+        <div>
+            @for (brand of brands; track $index) {
+                <div class="flex justify-between text-[#757F95] font-[inter] text-sm leading-5 pb-2">
+                    <div class="flex items-center">
+                        <input type="checkbox">
+                        <span class="ps-2">{{brand}}</span>
+                    </div>
+                    <span>(8)</span>
+                </div>
+            }
+        </div>
+    </app-sidebar-card>
+
+    <app-sidebar-card [card]="{title:'Price Rating'}">
+        <div class=" ">
+            <p class="font-[inter] text-[#F82BA9]">$ 0 - $ 360</p>
+            <label for="range-styled" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price Range</label>
+<input id="range-styled" type="range" value="50" 
+       class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 
+              [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 
+              [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-pink-500 
+              [&::-webkit-slider-thumb]:border-none 
+              [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 
+              [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-pink-500
+              [&::-moz-range-thumb]:border-none
+              focus:outline-none focus:ring-2 focus:ring-pink-200
+            dark:border-gray-500 [&::-webkit-slider-thumb]:dark:bg-pink-400
+              [&::-moz-range-thumb]:dark:bg-pink-400">
+        </div>
+    </app-sidebar-card>
+
+    <app-sidebar-card [card]="{title:'Sales'}">
+        @for (saleItem of sales; track $index) {
+            <div class="flex justify-between text-[#757F95] font-[inter] text-sm leading-5 pb-2">
+                <div class="flex items-center">
+                    <input type="checkbox">
+                    <span class="ps-2">{{saleItem}}</span>
+                </div>
+                <span>(8)</span>
+            </div>
+        }
+    </app-sidebar-card>
+
+    <app-sidebar-card [card]="{title:'Ratings'}">
+        @for (rating of getLoopArray(5); track $index) {
+            <div class="flex justify-between text-[#757F95] font-[inter] text-sm leading-5 pb-2">
+                <div class="flex items-center">
+                    <input type="checkbox">
+                    <span class="ps-2">
+                        @for (star of getLoopArray(5 - ($index * 1)); track $index) {
+                            <i class="fa-solid fa-star ps-1" style="color: #f82ba9;"></i>
+                        }
+                        @for (star of getLoopArray($index); track $index) {
+                            <i class="fa-regular fa-star ps-1" style="color: #f82ba9;"></i>
+                        }
+                    </span>
+                </div>
+            </div>
+        }
+    </app-sidebar-card>
+
+    <app-sidebar-card [card]="{title:'Colors'}">
+        <div class="flex justify-between text-[#757F95] font-[inter] text-sm leading-5 pb-2">
+            @for (color of colors; track $index) {
+                <div class="w-7 h-7 rounded-full cursor-pointer" [style.background-color]="color"></div>
+            }
+        </div>
+    </app-sidebar-card>
+
+    <app-sidebar-card [card]="{title:'Sizes'}">
+        @for (size of sizes; track $index) {
+            <div class="flex justify-between text-[#757F95] font-[inter] text-sm leading-5 pb-2">
+                <div class="flex items-center">
+                    <input type="checkbox">
+                    <span class="ps-2">{{size}}</span>
+                </div>
+            </div>
+        }
+    </app-sidebar-card>
+</div>
