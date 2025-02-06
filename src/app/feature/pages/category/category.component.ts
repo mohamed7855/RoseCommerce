@@ -9,4 +9,21 @@ import { CategSideBarComponent } from "../../components/categ-side-bar/categ-sid
 })
 export class CategoryComponent {
 
+  
+  isOpened:boolean=false;
+
+
+  toggleSide(){
+    if(this.isOpened == true){
+      this.isOpened = false;
+    }else {
+      this.isOpened = true
+    }
+  }
+  closeSlide(){
+    this.isOpened=false;
+    console.log(this.isOpened);
+    
+  }
+
 }

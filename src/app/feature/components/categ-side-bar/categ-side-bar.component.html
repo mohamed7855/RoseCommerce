@@ -1,4 +1,4 @@
-<div class=" flex flex-col gap-y-6" >
+<div class="absolute bg-white md:bg-transparent z-50 top-0 left-[-60%]  md:static md:flex md:flex-col md:gap-y-6 transition-[left] duration-500" [class.left-0]="isOpened">
     <app-sidebar-card [card]=" {title: 'Category'}">
         <div>
             @for (categ of categories; track $index) {

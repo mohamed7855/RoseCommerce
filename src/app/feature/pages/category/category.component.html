@@ -1,31 +1,121 @@
-<div class="container">
+<button class="px-4 md:hidden block py-2 bg-pink-400 text-white rounded-md" (click)="toggleSide()">Open Filter</button>
+<div class="container" (click)="closeSlide()">
     <div class=" flex gap-x-6">
-        <div class="w-1/4 ">
-            <app-categ-side-bar></app-categ-side-bar>
-
+        <div class="md:w-1/4 " (click)="$event.stopPropagation()">
+            <app-categ-side-bar [isOpened]="isOpened"></app-categ-side-bar>
         </div>
         <div class="w-3/4 grid grid-cols-3">
-            <div class="rounded-lg bg-red-700">
+            <div class="rounded-lg">
                 <img src="/images/circleGiftImage.png" class="w-full" alt="">
                 <h2>title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
             </div>
-            <div class="rounded-lg bg-red-700">
+            <div class="rounded-lg">
                 <img src="/images/circleGiftImage.png" class="w-full" alt="">
                 <h2>title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
             </div>
-            <div class="rounded-lg bg-red-700">
+            <div class="rounded-lg">
                 <img src="/images/circleGiftImage.png" class="w-full" alt="">
                 <h2>title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
             </div>
-            <div class="rounded-lg bg-red-700">
+            <div class="rounded-lg">
                 <img src="/images/circleGiftImage.png" class="w-full" alt="">
                 <h2>title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
             </div>
-            <div class="rounded-lg bg-red-700">
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
+                <img src="/images/circleGiftImage.png" class="w-full" alt="">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="rounded-lg">
                 <img src="/images/circleGiftImage.png" class="w-full" alt="">
                 <h2>title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, possimus.</p>

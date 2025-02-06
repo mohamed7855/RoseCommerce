@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input, OnChanges, SimpleChanges } from '@angular/core';
 import { SidebarCardComponent } from '../sidebar-card/sidebar-card.component';
 
 @Component({
@@ -7,7 +7,19 @@ import { SidebarCardComponent } from '../sidebar-card/sidebar-card.component';
   templateUrl: './categ-side-bar.component.html',
   styleUrl: './categ-side-bar.component.scss',
 })
-export class CategSideBarComponent {
+export class CategSideBarComponent implements OnChanges {
+
+  @Input() isOpened:boolean = false;
+
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['isOpened']) {
+      this.isOpened = changes['isOpened'].currentValue;
+      console.log("isOpened changed", this.isOpened);
+    }
+  }
+
+
   categories: string[] = [
     'Home & Living',
     'Garment Care',
