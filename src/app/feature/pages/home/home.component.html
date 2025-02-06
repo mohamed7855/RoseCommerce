@@ -1,3 +1,8 @@
+<button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="openModal()">clickkk</button>
+
+<app-modal [isOpen]="isClicked" (modalClose)="closeModal()">
+    <p>hamada</p>
+</app-modal>
 <app-categories-slider />
 <app-special-gift />
 <app-static-info />
