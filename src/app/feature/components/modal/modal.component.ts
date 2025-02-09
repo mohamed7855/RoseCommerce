@@ -1,4 +1,5 @@
-import { Component, EventEmitter, inject, Input, OnChanges, Output, Renderer2, SimpleChanges } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, EventEmitter, inject, Input, OnChanges, Output, PLATFORM_ID, Renderer2, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -8,6 +9,7 @@ import { Component, EventEmitter, inject, Input, OnChanges, Output, Renderer2, S
 })
 export class ModalComponent implements OnChanges {
   private readonly renderer2 = inject(Renderer2)
+  private readonly pLATFORM_ID = inject(PLATFORM_ID)
 
   @Input() isOpen: boolean = false;
   @Output() modalClose: EventEmitter<void> = new EventEmitter<void>();
@@ -16,9 +18,13 @@ export class ModalComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['isOpen']) {
       if (this.isOpen) {
+        if(isPlatformBrowser(this.pLATFORM_ID)){
         this.renderer2.addClass(document.body, 'overflow-hidden');
+        }
       } else {
+        if(isPlatformBrowser(this.pLATFORM_ID)){
         this.renderer2.removeClass(document.body, 'overflow-hidden');
+        }
       }
     }
   }
