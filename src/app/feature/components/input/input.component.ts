@@ -10,4 +10,5 @@ export class InputComponent {
   placeholder: InputSignal<string> = input<string>('First Name');
   type: InputSignal<string> = input<string>('text');
   classes: InputSignal<string> = input<string>('');
+  disabled: InputSignal<boolean> = input<boolean>(false);
 }
