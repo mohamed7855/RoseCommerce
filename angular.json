@@ -33,6 +33,8 @@
               }
             ],
             "styles": [
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ],
@@ -105,9 +107,42 @@
           }
         }
       }
+    },
+    "home-service": {
+      "projectType": "library",
+      "root": "projects/home-service",
+      "sourceRoot": "projects/home-service/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "options": {
+            "project": "projects/home-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/home-service/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/home-service/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/home-service/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
-    "analytics": "6c756c7f-f273-478b-80f1-2528d07fe724"
+    "analytics": "7d526961-a02b-4286-a5a1-a7db2adf9592"
   }
 }
