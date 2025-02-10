@@ -24,10 +24,16 @@
             </button>
         </div>
         @if (showNavbar()) {
-            <div class="w-screen h-screen bg-black opacity-50 absolute z-50">
-                <div class="relative top-0 start-0 w-7/12 p-4 bg-white">
-                    <img src="assets/images/logo.png" alt="">
-                </div>
+            <div class="absolute top-0 left-0 w-8/12 p-4 bg-white z-20">
+                <img src="assets/images/logo.png" (click)="toggleNavbar()" alt="">
+                <ul class="flex flex-col my-4 gap-y-6 text-mainText font-semibold">
+                    <li class="cursor-pointer" (click)="toggleNavbar()" [routerLink]="['/home']" routerLinkActive="text-mainBg">Home</li>
+                    <li class="cursor-pointer" (click)="toggleNavbar()" [routerLink]="['/category']" routerLinkActive="text-mainBg">All Category</li>
+                    <li class="cursor-pointer" (click)="toggleNavbar()" [routerLink]="['/about']" routerLinkActive="text-mainBg">About</li>
+                    <li class="cursor-pointer" (click)="toggleNavbar()" [routerLink]="['/contact']" routerLinkActive="text-mainBg">Contact</li>
+                </ul>
+            </div>
+            <div (click)="toggleNavbar()" class="bg-black opacity-50 absolute top-0 bottom-0 right-0 left-0 z-10">
             </div>
         }
     </div>
