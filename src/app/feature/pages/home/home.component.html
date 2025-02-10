@@ -1,3 +1,12 @@
+<div class="container flex justify-end gap-x-3">
+    <button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="openModal()">Signup</button>
+    <button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="openModal()">Login</button>
+</div> 
+<!-- should be replaced with the navbar -->
+
+<app-modal [isOpen]="isClicked" (modalClose)="closeModal()">
+    <p>signup</p>
+</app-modal>
 <app-categories-slider />
 <app-special-gift />
 <app-static-info />

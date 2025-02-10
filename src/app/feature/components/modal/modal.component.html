@@ -1,0 +1,16 @@
+
+<div class=" bg-[rgba(0,0,0,0.8)] absolute z-50 top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0 invisible transition-opacity duration-0"
+    [class.opacity-100]="isOpen"
+    [class.visible]="isOpen"
+    [class.invisible]="!isOpen"
+    (click)="closeModal()"
+>
+
+    <div class="inner-modal w-[40%] shadow-[0px_1px_10px_0px_rgba(0,0,0,0.05)] opacity-0 transition-opacity duration-300 bg-white rounded-[20px] p-10" [class.opacity-100]="isOpen"
+    (click)="$event.stopPropagation()">
+
+        <ng-content></ng-content>
+        
+
+    </div>
+</div>
