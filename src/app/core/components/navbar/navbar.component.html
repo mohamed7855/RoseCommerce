@@ -1,9 +1,9 @@
-<nav>
+<nav class="border-b-2 border-gray-300">
     <div class="w-11/12 mx-auto py-4 flex items-center justify-between">
         <div class="cursor-pointer" [routerLink]="['/home']">
             <img src="assets/images/logo.png" alt="Rose Commerce Logo">
         </div>
-        <ul class="flex gap-x-6 text-mainText font-semibold">
+        <ul class="hidden md:flex flex-row gap-x-6 text-mainText font-semibold">
             <li class="cursor-pointer" [routerLink]="['/home']" routerLinkActive="text-mainBg">Home</li>
             <li class="cursor-pointer" [routerLink]="['/category']" routerLinkActive="text-mainBg">All Category</li>
             <li class="cursor-pointer" [routerLink]="['/about']" routerLinkActive="text-mainBg">About</li>
@@ -11,14 +11,24 @@
         </ul>
         <div class="flex gap-x-4">
             <button class="cursor-pointer">
-                <img src="../../../../assets/icons/search.png" alt="Search Icon">
+                <img class="w-20px h-20px" src="assets/icons/search.png" alt="Search Icon">
             </button>
             <button class="cursor-pointer">
-                <img src="../../../../assets/icons/heart.png" alt="Heart Icon">
+                <img class="w-20px h-20px" src="assets/icons/heart.png" alt="Heart Icon">
             </button>
             <button class="cursor-pointer">
-                <img src="../../../../assets/icons/bag.png" alt="Bag Icon">
+                <img class="w-20px h-20px" src="assets/icons/bag.png" alt="Bag Icon">
+            </button>
+            <button class="cursor-pointer md:hidden" (click)="toggleNavbar()">
+                <img class="w-20px h-20px" src="assets/icons/navbar.png" alt="Navbar Icon">
             </button>
         </div>
+        @if (showNavbar()) {
+            <div class="w-screen h-screen bg-black opacity-50 absolute z-50">
+                <div class="relative top-0 start-0 w-7/12 p-4 bg-white">
+                    <img src="assets/images/logo.png" alt="">
+                </div>
+            </div>
+        }
     </div>
 </nav>
