@@ -14,5 +14,5 @@ export const routes: Routes = [
   {path: 'delivery', title: 'Delivery', loadComponent: () => import('./feature/pages/delivery/delivery.component').then(c => c.DeliveryComponent)},
   {path: 'policy', title: 'Policy', loadComponent: () => import('./feature/pages/policy/policy.component').then(c => c.PolicyComponent)},
   {path: 'faqs', title: 'FAQS', loadComponent: () => import('./feature/pages/faqs/faqs.component').then(c => c.FaqsComponent)},
-  {path: 'details', title: 'FAQS', loadComponent: () => import('./feature/pages/details/details.component').then(c => c.DetailsComponent)}
+  {path: 'details/:id', title: 'FAQS', loadComponent: () => import('./feature/pages/details/details.component').then(c => c.DetailsComponen)}
 ];
