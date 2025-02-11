@@ -1,3 +1,4 @@
 <input type="{{type()}}"
-    class="focus:outline-none shadow text-gray-950 text-base leading-8 block w-full p-2 appearance-none border"
-    [class]="classes()" [attr.placeholder]="placeholder()"  [attr.disabled]="disabled() ? '' : null"  />
+    class="focus:outline-none shadow text-gray-950 text-base leading-8 block w-full p-2 appearance-none border rounded-[20px]"
+    [class]="classes()" [attr.placeholder]="placeholder()" [attr.disabled]="disabled() ? '' : null"
+    (input)="onInputChange($event)" [value]="value" />

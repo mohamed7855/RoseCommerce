@@ -8,10 +8,11 @@ import {
 import { Router } from '@angular/router';
 import { TokenService } from '../../services/token/token.service';
 import { AuthService } from 'auth';
+import { InputComponent } from "../../../feature/components/input/input.component";
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, InputComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })

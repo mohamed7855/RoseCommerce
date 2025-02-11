@@ -1,12 +1,8 @@
 <form [formGroup]="loginForm" (submit)="login()">
     <h2 class="text-3xl leading-9">Login to your account</h2>
     <div class="flex gap-6 flex-col mt-8">
-        <input formControlName="email" type="text"
-            class="rounded-[20px] focus:outline-none shadow text-gray-950 text-base leading-8 block w-full p-2 appearance-none border"
-            placeholder="Enter Name" />
-        <input formControlName="password" type="text"
-            class="rounded-[20px] focus:outline-none shadow text-gray-950 text-base leading-8 block w-full p-2 appearance-none border"
-            placeholder="Enter Password" />
+        <app-input formControlName="email" [type]="'email'" [placeholder]="'Email'"></app-input>
+        <app-input formControlName="password" [type]="'password'" [placeholder]="'Password'"></app-input>
     </div>
     <div class="flex justify-between mt-6">
         <div class="flex items-center gap-2 text-[#313131]">
@@ -18,6 +14,7 @@
             Forgot Password</h5>
     </div>
     <h3 class="text-[#313131] tracking-normal text-center mt-6 leading-5 font-normal">No account? <span
-            class="font-semibold text-[var(--main-color)] text-sm underline  decoration-solid underline-offset-2">Create one here</span></h3>
+            class="font-semibold text-[var(--main-color)] text-sm underline  decoration-solid underline-offset-2">Create
+            one here</span></h3>
     <button class="mt-6 text-white py-3 rounded-[30px] w-full bg-[var(--main-color)] ">Login</button>
 </form>
