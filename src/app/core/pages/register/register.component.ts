@@ -7,10 +7,11 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthService } from 'auth';
+import { InputComponent } from '../../../feature/components/input/input.component';
 
 @Component({
   selector: 'app-register',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, InputComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
@@ -22,7 +23,7 @@ export class RegisterComponent {
     email: new FormControl(null, Validators.required),
     password: new FormControl(null, Validators.required),
     rePassword: new FormControl(null, Validators.required),
-    gender: new FormControl("male", Validators.required),
+    gender: new FormControl('male', Validators.required),
   });
 
   constructor(private _AuthService: AuthService) {}
