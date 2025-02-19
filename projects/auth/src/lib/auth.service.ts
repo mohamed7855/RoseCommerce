@@ -1,0 +1,111 @@
+import { Injectable } from '@angular/core';
+import { AuthAPI } from './base/AuthAPI';
+import { catchError,  map,  Observable, of, throwError } from 'rxjs';
+import { ForgetPassword } from './interfaces/forgetPassword';
+import {
+  ForgetPasswordAPIRes,
+  ForgetPasswordRes,
+} from './interfaces/forgetPasswordRes';
+import { Login } from './interfaces/login';
+import { LoginAPIRes, LoginRes } from './interfaces/loginRes';
+import { Register } from './interfaces/register';
+import { RegisterAPIRes, RegisterRes } from './interfaces/registerRes';
+import { ResetPassword } from './interfaces/resetPassword';
+import {
+  ResetPasswordAPIRes,
+  ResetPasswordRes,
+} from './interfaces/resetPasswordRes';
+import { VerifyCode } from './interfaces/verifyCode';
+import { VerifyCodeAPIRes, VerifyCodeRes } from './interfaces/verifyCodeRes';
+import { HttpClient } from '@angular/common/http';
+import { AuthLoginAPIAdapterService } from './adapter/auth-login-api.adapter.service';
+import { AuthEndpoint } from './enums/AuthAPI.endpoint';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class AuthService implements AuthAPI {
+  baseURL!: string;
+
+  setBaseURL() {
+    this.baseURL = 'https://flower.elevateegy.com';
+  }
+
+  constructor(
+    private _httpClient: HttpClient,
+    private _authAPIAdapterService: AuthLoginAPIAdapterService
+  ) {
+    this.setBaseURL();
+    console.log(this.baseURL);
+  }
+  
+  login(data: Login): Observable<LoginRes> {
+    const api = `${this.baseURL}${AuthEndpoint.LOGIN}`;
+    return this._httpClient.post<LoginAPIRes>(api, data).pipe(
+      map((res: LoginAPIRes) => this._authAPIAdapterService.adaptLogin(res)),
+      catchError((err) => of())
+    );
+  }
+
+  register(data: Register): Observable<RegisterRes> {
+    const api = `${this.baseURL}${AuthEndpoint.REGISTER}`;
+    return this._httpClient.post<RegisterAPIRes>(api, data).pipe(
+      map((res: RegisterAPIRes) =>
+        this._authAPIAdapterService.adaptRegister(res)
+      ),
+      catchError((err) => {
+        console.error('Registration error:', err);
+        return throwError(
+          () => new Error(err?.error?.message || 'Registration failed.')
+        );
+      })
+    );
+  }
+
+  forgetPassword(data: ForgetPassword): Observable<ForgetPasswordRes> {
+    const api = `${this.baseURL}${AuthEndpoint.FORGET_PASSWORD}`;
+    return this._httpClient.post<ForgetPasswordAPIRes>(api, data).pipe(
+      map((res: ForgetPasswordAPIRes) =>
+        this._authAPIAdapterService.adaptForgetPassword(res)
+      ),
+      catchError((err) => {
+        console.error('ForgetPassword error:', err);
+        return throwError(
+          () =>
+            new Error(err?.error?.message || 'Password reset request failed.')
+        );
+      })
+    );
+  }
+
+  verifyCode(data: VerifyCode): Observable<VerifyCodeRes> {
+    const api = `${this.baseURL}${AuthEndpoint.VERIFY_PASSWORD}`;
+    return this._httpClient.post<VerifyCodeAPIRes>(api, data).pipe(
+      map((res: VerifyCodeAPIRes) =>
+        this._authAPIAdapterService.adaptVerifyCode(res)
+      ),
+      catchError((err) => {
+        console.error('ResetCode error:', err);
+        return throwError(
+          () => new Error(err?.error?.message || 'Code reset request failed.')
+        );
+      })
+    );
+  }
+
+  resetPassword(data: ResetPassword): Observable<ResetPasswordRes> {
+    const api = `${this.baseURL}${AuthEndpoint.RESET_PASSWORD}`;
+    return this._httpClient.put<ResetPasswordAPIRes>(api, data).pipe(
+      map((res: ResetPasswordAPIRes) =>
+        this._authAPIAdapterService.adaptResetPassword(res)
+      ),
+      catchError((err) => {
+        console.error('ResetPassword error:', err);
+        return throwError(
+          () =>
+            new Error(err?.error?.message || 'Password reset request failed.')
+        );
+      })
+    );
+  }
+}

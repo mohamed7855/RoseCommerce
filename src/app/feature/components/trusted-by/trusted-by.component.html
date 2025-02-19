@@ -1,0 +1,10 @@
+<div class="container mx-auto mt-16">
+    <div class="bg-[var(--second-color)] px-6 rounded-2xl">
+        <h4 class=" text-[var(--text-main-color)] font-bold text-2xl sm:text-3xl relative text-center py-10 after:content-[''] after:bg-[var(--main-color)] after:w-40 after:absolute after:h-[2px] after:bottom-8 after:left-1/2 after:translate-x-[-117%] md:after:translate-x-[-147%]">Trusted By Over <span class="text-[var(--main-color)]">4.5k+</span> Companies</h4>
+        <div class="flex justify-between pb-10">
+            @for (img of imgList; track $index) {
+                <img class="w-[12%]" [src]="imgList[$index]" alt="">
+            }
+        </div>
+    </div>
+</div>
