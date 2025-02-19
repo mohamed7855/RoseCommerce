@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ProductCartComponent } from '../../UI/product-cart/product-cart.component';
 import { ProductsService } from '../../../feature/services/Products/products.service';
 import { IProduct } from '../../../feature/models/product';
@@ -21,7 +21,7 @@ export class PopularItemsComponent implements OnDestroy{
     this.getAllProduct();
   }
   ngOnDestroy(): void {
-    this._productsService.getProducts().subscribe();
+    // this._productsService.getProducts().subscribe();
   }
 
   getAllProduct(){
