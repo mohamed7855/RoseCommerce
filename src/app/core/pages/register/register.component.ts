@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, output } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -8,14 +8,18 @@ import {
 } from '@angular/forms';
 import { AuthService } from 'auth';
 import { InputComponent } from '../../../feature/components/input/input.component';
+import { RouterLink } from '@angular/router';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-register',
-  imports: [ReactiveFormsModule, InputComponent],
+  imports: [ReactiveFormsModule, InputComponent ,
+  ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
+
   registerForm: FormGroup = new FormGroup({
     firstName: new FormControl(null, Validators.required),
     lastName: new FormControl(null, Validators.required),
@@ -32,5 +36,8 @@ export class RegisterComponent {
     this._AuthService.register(this.registerForm.value).subscribe((res) => {
       console.log(res);
     });
+
   }
+
+ 
 }
