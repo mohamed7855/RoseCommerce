@@ -1,15 +1,20 @@
 <div class="container flex justify-end gap-x-3">
-    <button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="openModal()">Signup</button>
-    <button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="openModal()">Login</button>
+    <button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="signup()">Signup</button>
+    <button class="px-3 py-2 bg-pink-500 rounded-lg" (click)="login()">Login</button>
 </div> 
 <!-- should be replaced with the navbar -->
 
 <app-modal [isOpen]="isClicked" (modalClose)="closeModal()">
-    <p>signup</p>
+    <app-register  *ngIf="isViewSignup"/>
+    <app-login *ngIf="isViewLogin"/>
+    <!-- <app-forget-password *ngIf="isViewForget"/> -->
 </app-modal>
 <app-categories-slider />
 <app-special-gift />
 <app-static-info />
+<app-seller-gifts />
+<app-popular-items/>
+
 <app-about-us />
 <app-gallery />
 <app-customer-opinion />
