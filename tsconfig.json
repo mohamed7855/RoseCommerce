@@ -6,6 +6,9 @@
     "outDir": "./dist/out-tsc",
     "strict": true,
     "paths": {
+      "auth": [
+        "./dist/auth"
+      ],
       "home-service": [
         "./dist/home-service",
         "./dist/home-service"

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { initFlowbite } from 'flowbite';
+
 import { FooterComponent } from "./core/components/footer/footer.component";
 
 @Component({
@@ -8,6 +10,10 @@ import { FooterComponent } from "./core/components/footer/footer.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'RoseCommerce';
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }
