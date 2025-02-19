@@ -10,6 +10,7 @@ import { ModalComponent } from "../../components/modal/modal.component";
 import { PopularItemsComponent } from "../../../shared/Bussiness/popular-items/popular-items.component";
 import { SellerGiftsComponent } from "../../../shared/Bussiness/seller-gifts/seller-gifts.component";
 import { RegisterComponent } from "../../../core/pages/register/register.component";
+import { LoginComponent } from "../../../core/pages/login/login.component";
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,8 @@ import { RegisterComponent } from "../../../core/pages/register/register.compone
     ModalComponent,
     PopularItemsComponent,
     SellerGiftsComponent ,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
