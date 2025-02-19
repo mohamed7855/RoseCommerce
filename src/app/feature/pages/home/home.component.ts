@@ -24,7 +24,7 @@ import { RegisterComponent } from "../../../core/pages/register/register.compone
     ModalComponent,
     PopularItemsComponent,
     SellerGiftsComponent ,
-    // RegisterComponent
+    RegisterComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
