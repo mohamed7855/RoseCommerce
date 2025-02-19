@@ -7,6 +7,8 @@ import { CustomerOpinionComponent } from '../../components/customer-opinion/cust
 import { TrustedByComponent } from '../../components/trusted-by/trusted-by.component';
 import { AboutUsComponent } from '../../components/about-us/about-us.component';
 import { ModalComponent } from "../../components/modal/modal.component";
+import { PopularItemsComponent } from "../../../shared/Bussiness/popular-items/popular-items.component";
+import { SellerGiftsComponent } from "../../../shared/Bussiness/seller-gifts/seller-gifts.component";
 
 @Component({
   selector: 'app-home',
@@ -18,7 +20,9 @@ import { ModalComponent } from "../../components/modal/modal.component";
     TrustedByComponent,
     AboutUsComponent,
     GalleryComponent,
-    ModalComponent
+    ModalComponent,
+    PopularItemsComponent,
+    SellerGiftsComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
