@@ -9,6 +9,7 @@ import { AboutUsComponent } from '../../components/about-us/about-us.component';
 import { ModalComponent } from "../../components/modal/modal.component";
 import { PopularItemsComponent } from "../../../shared/Bussiness/popular-items/popular-items.component";
 import { SellerGiftsComponent } from "../../../shared/Bussiness/seller-gifts/seller-gifts.component";
+import { RegisterComponent } from "../../../core/pages/register/register.component";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ import { SellerGiftsComponent } from "../../../shared/Bussiness/seller-gifts/sel
     GalleryComponent,
     ModalComponent,
     PopularItemsComponent,
-    SellerGiftsComponent
+    SellerGiftsComponent ,
+    // RegisterComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
